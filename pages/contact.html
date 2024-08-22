@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="../styles/contacts.css">
+</head>
+
+<body>
+    <section id="contactme">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" placeholder="Reason for Contact" required>
+                    <label for="subject">Reason</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </div>
+        <script src="../scripts/contact.js"></script>
+    </section>
+</body>
+
+</html>
