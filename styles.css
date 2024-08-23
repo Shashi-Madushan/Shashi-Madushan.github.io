@@ -1,6 +1,6 @@
 :root {
-  --antiflash-white: #e9eff2ff;
-  --antiflash-white-2: #f5fafbff;
+  --antiflash-white: rgb(212, 212, 212);
+  --antiflash-white-2: #cacaca;
   --celestial-blue: #0897daff;
   --rich-black: #071317ff;
   --black: #050707ff;
@@ -39,13 +39,13 @@ body {
   padding: 25px 0 0 0;
   box-sizing: border-box;
   border-radius: var(--border-radius);
-  box-shadow: 0 0 5px var(--glow-color);
+  box-shadow: 0 0 3px var(--glow-color);
   transition: box-shadow 0.3s ease-in-out;
   z-index: 10;
 }
 
 .sidebar:hover {
-  box-shadow: 0 0 10px var(--glow-color);
+  box-shadow: 0 0 5px var(--glow-color);
 }
 
 .sidebar-info {
@@ -58,14 +58,18 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: var(--spacing-medium);
+  transition: transform 0.3s ease;
 }
 
+.avatar-box:hover{
+  transform: scale(1.1);
+}
 .redius {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 10px var(--glow-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .name {
@@ -86,13 +90,13 @@ body {
   margin-top: 5px;
   margin-bottom: 15px;
   text-align: center;
-  box-shadow: 0 0 8px var(--glow-color);
+  box-shadow: 0 0 3px var(--glow-color);
 }
 
 .separator {
   border-top: 1px solid var(--antiflash-white);
   margin: var(--spacing-medium) 0;
-  box-shadow: 0 0 5px var(--glow-color);
+  box-shadow: 0 0 2px var(--glow-color);
 }
 
 .contacts-list {
@@ -111,13 +115,13 @@ body {
 .icon-box {
   width: 30px;
   height: 30px;
-  background-color: var(--black);
+ 
   border-radius: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin: 0 5px;
+  margin: 5px 10px;
 }
 
 .contact-title {
@@ -254,13 +258,13 @@ ul {
   margin-top: var(--spacing-small);
   background-color: var(--rich-black);
   border-radius: var(--border-radius);
-  box-shadow: 0 0 5px var(--glow-color);
+  box-shadow: 0 0 3px var(--glow-color);
   transition: box-shadow 0.3s ease-in-out;
   max-width: 80vw;
 }
 
 .main-content:hover {
-  box-shadow: 0 0 10px var(--glow-color);
+  box-shadow: 0 0 5px var(--glow-color);
 }
 
 .top-bar {

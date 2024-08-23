@@ -5,10 +5,10 @@
 }
 
 .contact-container {
-    background-color: var(--antiflash-white);
+    background-color:#353535;
     border-radius: 10px;
     padding: 20px 40px;
-    box-shadow: 0 0 10px var(--glow-color);
+   
     max-width: 600px;
     width: 100%;
 }
@@ -28,8 +28,8 @@
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    background: var(--antiflash-white-2);
-    border: 2px solid var(--celestial-blue);
+    background: #202020;
+    border: 2px solid rgb(75, 75, 75);
     border-radius: 5px;
     outline: none;
     color: var(--rich-black);
