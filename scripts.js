@@ -64,3 +64,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const defaultFile = links[0].getAttribute('data-file');
     loadContent(defaultFile);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggle-sidebar-info');
+    const sidebarInfoMore = document.querySelector('.sidebar-info_more');
+
+    toggleButton.addEventListener('click', function () {
+      if (sidebarInfoMore.style.display === 'none' || sidebarInfoMore.style.display === '') {
+        sidebarInfoMore.style.display = 'block'; // Show the section
+        toggleButton.textContent = '▲'; // Change the button text to an up arrow
+      } else {
+        sidebarInfoMore.style.display = 'none'; // Hide the section
+        toggleButton.textContent = '▼'; // Change the button text to a down arrow
+      }
+    });
+  });
