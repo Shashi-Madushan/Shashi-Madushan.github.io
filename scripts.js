@@ -72,10 +72,10 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleButton.addEventListener('click', function () {
       if (sidebarInfoMore.style.display === 'none' || sidebarInfoMore.style.display === '') {
         sidebarInfoMore.style.display = 'block'; // Show the section
-        toggleButton.textContent = '▲'; // Change the button text to an up arrow
+        toggleButton.textContent = 'See less ▲'; // Change the button text to an up arrow
       } else {
         sidebarInfoMore.style.display = 'none'; // Hide the section
-        toggleButton.textContent = '▼'; // Change the button text to a down arrow
+        toggleButton.textContent = 'See more ▼'; // Change the button text to a down arrow
       }
     });
   });

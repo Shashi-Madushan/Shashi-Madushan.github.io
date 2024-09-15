@@ -20,7 +20,8 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 100%;
   font-family: var(--font-family);
   color: var(--antiflash-white-2);
   background-color: var(--black);
@@ -44,6 +45,7 @@ body {
   z-index: 10;
   display: flex;
   flex-direction: column;
+  
 }
 
 .sidebar:hover {
@@ -67,8 +69,8 @@ body {
   transform: scale(1.1);
 }
 .redius {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -98,16 +100,26 @@ body {
 .sidebar-info_more {
   display: block; /* Initially visible */
 }
+
+.container {
+  position: relative;
+}
+
+
 #toggle-sidebar-info {
-  display: none; /* Hide button by default */
+  display: none; 
+  position: absolute; 
+  bottom: 0px;
+  right: 0px;
   background: rgb(139, 139, 139);
   border: 1px solid white;
-  border-radius: 8px;
+  border-radius: 8px 0 8px 0;
   font-size: 20px;
   cursor: pointer;
   color: white;
-  width: 60px
-
+  width: 130px;
+  height: 32px;
+  z-index: 1000; /* Ensure the button is above other content */
 }
 
 
@@ -327,9 +339,8 @@ nav a:active {
 
 /* Card styles */
 .cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns for desktop and laptop view */
   gap: 16px;
 }
 
@@ -337,8 +348,6 @@ nav a:active {
   border: 1px solid var(--antiflash-white);
   margin: 1px;
   border-radius: 10px;
-  width: 300px;
-  aspect-ratio: 16/9;
   background-color: var(--rich-black);
   display: flex;
   align-items: center;
@@ -348,6 +357,7 @@ nav a:active {
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   box-shadow: 0 0 5px var(--glow-color);
+ 
 }
 
 .card:hover {
@@ -359,7 +369,7 @@ nav a:active {
   transform: scale(1.1, 1.1);
 }
 
-.cards:hover>.card:not(:hover) {
+.cards:hover > .card:not(:hover) {
   filter: blur(10px);
   transform: scale(0.9, 0.9);
 }
@@ -371,96 +381,95 @@ nav a:active {
 section {
   min-height: 85vh;
   margin-bottom: 30px;
-
 }
 
+/* Media Queries */
 
-/* Media Queries /////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////// */
-@media (max-width: 1200px) {
-  .main-content {
+/* Large screens (1200px and up) */
+/* No styles */
 
+/* Medium screens (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
   }
-}
-
-@media (max-width: 992px) {
-
   .main-content {
     margin-left: calc(var(--sidebar-width) + 40px);
     margin-right: 20px;
     margin-top: 15px;
   }
-
-
   .cards .card {
-    width: 250px;
+    max-width: 250px;
   }
 }
 
-@media (max-width: 768px) {
+/* Small screens (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
   .main-content {
-    width: calc(100% - 10px); /* Adjust the width as needed */
+    width: calc(100% - 10px);
     margin-left: 20px;
   }
-
   .sidebar {
     position: relative;
     padding-bottom: 20px;
+    
     margin-bottom: var(--spacing-large);
-    width: calc(100% - 40px); /* Set the same width as main-content */
+    width: calc(100% - 30px);
     flex-direction: row;
     justify-content: space-evenly;
   }
-
   .cards .card {
     width: 100%;
   }
-
   nav a {
     padding: 0 0.625em;
   }
-
-
   #toggle-sidebar-info {
-    display: none; /* Show toggle button on mobile */
+    display: none;
   }
-
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width: 576px) {
+/* Extra small screens (576px and down) */
+@media (max-width: 767px) {
+  .sidebar-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar-info_more {
+    display: none;
+  }
   #toggle-sidebar-info {
-    display: block; /* Show toggle button on mobile */
+    display: block;
   }
   .main-content {
     margin: 30px auto;
     width: calc(100% - 40px);
   }
-
   .sidebar {
     position: relative;
     padding-bottom: 20px;
     margin-bottom: var(--spacing-large);
-    width: calc(100% - 40px); /* Set the same width as main-content */
+    width: calc(100% - 40px);
     flex-direction: column;
   }
-
-
-
   .redius {
-    width: 160px;
-    height: 160px;
+    width: 190px;
+    height: 190px;
   }
-
   .cards .card {
     width: 100%;
   }
-
-  .name {
-    font-size: 1.2em;
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
   }
-
+  .name {
+    font-size: 1.6em;
+  }
   .title {
-    font-size: 0.8em;
+    font-size: 1.0em;
   }
 }

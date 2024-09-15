@@ -1,5 +1,5 @@
 .typing-container {
-  font-size: 24px;
+  font-size: 1.5vw; 
   font-family: Arial, sans-serif;
   display: inline-block;
   white-space: nowrap;
@@ -8,31 +8,25 @@
 
 .typing-container .typing-text {
   display: inline;
-  font-size: 60px;
-  /* Adjust the size as needed */
-
+  font-size: 4vw; 
   font-family: Arial, sans-serif;
-  /* Optional: Change the font family */
-
 }
 
 .typing-container .cursor {
   display: inline-block;
-  width: 8px;
-  height: 65px;
+  width: 1vw; 
+  height: 8vh; 
   background-color: rgb(255, 255, 255);
-  margin-left: 2px;
+  margin-left: 0.5vw;
   animation: blink 0.7s steps(1) infinite;
   vertical-align: bottom;
 }
 
 @keyframes blink {
-
   0%,
   50% {
     opacity: 1;
   }
-
   50.1%,
   100% {
     opacity: 0;
