@@ -45,7 +45,7 @@ body {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  
+
 }
 
 .sidebar:hover {
@@ -65,9 +65,10 @@ body {
   transition: transform 0.3s ease;
 }
 
-.avatar-box:hover{
+.avatar-box:hover {
   transform: scale(1.1);
 }
+
 .redius {
   width: 180px;
   height: 180px;
@@ -98,7 +99,8 @@ body {
 }
 
 .sidebar-info_more {
-  display: block; /* Initially visible */
+  display: block;
+  /* Initially visible */
 }
 
 .container {
@@ -107,8 +109,8 @@ body {
 
 
 #toggle-sidebar-info {
-  display: none; 
-  position: absolute; 
+  display: none;
+  position: absolute;
   bottom: 0px;
   right: 0px;
   background: rgb(139, 139, 139);
@@ -119,7 +121,8 @@ body {
   color: white;
   width: 130px;
   height: 32px;
-  z-index: 1000; /* Ensure the button is above other content */
+  z-index: 1000;
+  /* Ensure the button is above other content */
 }
 
 
@@ -145,7 +148,7 @@ body {
 .icon-box {
   width: 30px;
   height: 30px;
- 
+
   border-radius: 5%;
   display: flex;
   justify-content: center;
@@ -340,7 +343,8 @@ nav a:active {
 /* Card styles */
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 3 columns for desktop and laptop view */
+  grid-template-columns: repeat(4, 1fr);
+  /* 3 columns for desktop and laptop view */
   gap: 16px;
 }
 
@@ -357,7 +361,7 @@ nav a:active {
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   box-shadow: 0 0 5px var(--glow-color);
- 
+
 }
 
 .card:hover {
@@ -369,7 +373,7 @@ nav a:active {
   transform: scale(1.1, 1.1);
 }
 
-.cards:hover > .card:not(:hover) {
+.cards:hover>.card:not(:hover) {
   filter: blur(10px);
   transform: scale(0.9, 0.9);
 }
@@ -393,11 +397,13 @@ section {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .main-content {
     margin-left: calc(var(--sidebar-width) + 40px);
     margin-right: 20px;
     margin-top: 15px;
   }
+
   .cards .card {
     max-width: 250px;
   }
@@ -409,46 +415,55 @@ section {
     width: calc(100% - 10px);
     margin-left: 20px;
   }
+
   .sidebar {
     position: relative;
     padding-bottom: 20px;
-    
+
     margin-bottom: var(--spacing-large);
     width: calc(100% - 30px);
     flex-direction: row;
     justify-content: space-evenly;
   }
+
   .cards .card {
     width: 100%;
   }
+
   nav a {
     padding: 0 0.625em;
   }
+
   #toggle-sidebar-info {
     display: none;
   }
+
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Extra small screens (576px and down) */
 @media (max-width: 767px) {
   .sidebar-info {
     display: flex;
     align-items: center;
     justify-content: center;
+
   }
+
   .sidebar-info_more {
     display: none;
   }
+
   #toggle-sidebar-info {
     display: block;
   }
+
   .main-content {
     margin: 30px auto;
     width: calc(100% - 40px);
   }
+
   .sidebar {
     position: relative;
     padding-bottom: 20px;
@@ -456,20 +471,95 @@ section {
     width: calc(100% - 40px);
     flex-direction: column;
   }
+
   .redius {
     width: 190px;
     height: 190px;
   }
+
   .cards .card {
     width: 100%;
   }
+
   .cards {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .name {
     font-size: 1.6em;
   }
+
   .title {
     font-size: 1.0em;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #toggle-sidebar-info {
+    display: block;
+    /* Show toggle button on mobile */
+  }
+
+  .main-content {
+    margin: 30px auto;
+    width: calc(100% - 40px);
+  }
+
+  .sidebar {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: var(--spacing-large);
+    width: calc(100% - 40px);
+    /* Set the same width as main-content */
+    flex-direction: column;
+  }
+
+
+
+  .redius {
+    width: 160px;
+    height: 160px;
+  }
+
+  .cards .card {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 1.2em;
+  }
+
+  .title {
+    font-size: 0.8em;
+  }
+
+  .top-bar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 50;
+    height: 50px;
+  }
+
+  nav {
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0.1em;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    font-size: 0.98em;
+  }
+
+  nav a {
+    padding: 15px;
   }
 }
