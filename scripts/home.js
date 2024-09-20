@@ -38,36 +38,6 @@
             description: 'Description for project 2',
             liveDemo: 'http://example.com/demo2',
             github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
         }
 
     ];
@@ -131,7 +101,83 @@
 
     type(); // Start the typing animation
 
+
+    let slideIndex = 1;
+    let autoScroll;
+
+    function showSlides(n) {
+        const slides = document.getElementsByClassName("carousel-images")[0].getElementsByTagName("img");
+        const dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+            dots[i].classList.remove("active-dot");
+        }
+
+        slides[slideIndex - 1].classList.add("active");
+        dots[slideIndex - 1].classList.add("active-dot");
+    }
+
+    function plusSlides(n) {
+        slideIndex += n;
+        showSlides(slideIndex);
+        resetAutoScroll();
+    }
+
+    function currentSlide(n) {
+        slideIndex = n;
+        showSlides(slideIndex);
+        resetAutoScroll();
+    }
+
+    function autoSlide() {
+        slideIndex++;
+        showSlides(slideIndex);
+    }
+
+    function resetAutoScroll() {
+        clearInterval(autoScroll);
+        autoScroll = setInterval(autoSlide, 3000);
+    }
+
+    document.getElementById('carousel').addEventListener('mouseenter', () => {
+        clearInterval(autoScroll);
+    });
+
+    document.getElementById('carousel').addEventListener('mouseleave', () => {
+        resetAutoScroll();
+    });
+
+    const dots = document.getElementsByClassName("dot");
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', () => {
+            currentSlide(i + 1); // Adjust index to start from 1
+        });
+    }
+
+    // Add event listeners for next and previous buttons
+    document.querySelector('.prev').addEventListener('click', () => {
+        plusSlides(-1); // Move to the previous slide
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        plusSlides(1); // Move to the next slide
+    });
+
+    showSlides(slideIndex);
+    autoScroll = setInterval(autoSlide, 3000);
+
+
+
+
+
+
+
+
+
+
 })();
-
-
 
