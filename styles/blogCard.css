@@ -61,19 +61,19 @@
   }
   
   /* Responsive design using grid */
-  @media (max-width: 1200px) {
+  @media(min-width: 992px) and (max-width: 1199px){
     .blog-card-container {
       grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
     }
   }
   
-  @media (max-width: 992px) {
+  @media (min-width: 768px) and (max-width: 991px)  {
     .blog-card-container {
       grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
     }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .blog-card-container {
       grid-template-columns: 1fr; /* 1 card per row */
     }
