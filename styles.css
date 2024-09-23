@@ -303,6 +303,9 @@ ul {
 .top-bar {
   display: flex;
   justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
 
 }
 
@@ -343,7 +346,7 @@ nav a:active {
 /* Card styles */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   /* 3 columns for desktop and laptop view */
   gap: 16px;
 }
@@ -383,9 +386,10 @@ nav a:active {
 }
 
 section {
-  min-height: 30vh;
+  min-height: 80vh;
   margin-bottom: 30px;
   padding-top: 10px;
+  
 }
 
 /* Media Queries */
@@ -499,8 +503,17 @@ section {
   .sidebar-info {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+
+  }
+  .avatar-box{
+    margin: 0;
+  }
+  .redius {
+    width: 90px;
+    height: 90px;
   }
 
   #toggle-sidebar-info {
@@ -509,25 +522,21 @@ section {
   }
 
   .main-content {
-    margin: 30px auto;
+    margin: 30px auto 60px auto;
     width: calc(100% - 40px);
   }
 
   .sidebar {
     position: relative;
-    padding-bottom: 20px;
     margin-bottom: var(--spacing-large);
     width: calc(100% - 40px);
     /* Set the same width as main-content */
     flex-direction: column;
   }
 
+  
 
 
-  .redius {
-    width: 160px;
-    height: 160px;
-  }
 
   .cards .card {
     width: 100%;
@@ -543,7 +552,7 @@ section {
 
   .top-bar {
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     right: 0;
     width: 100%;
     z-index: 50;
@@ -562,11 +571,15 @@ section {
 
   nav a {
     text-align: center;
-    width:70px;
+    width: 70px;
     padding: 1.5em 0;
   }
 
-  .cards{
+  .cards {
     padding: 0 10px;
+  }
+
+  .carousel {
+    height: 60%;
   }
 }

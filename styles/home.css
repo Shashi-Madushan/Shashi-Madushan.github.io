@@ -1,5 +1,5 @@
 .typing-container {
-  font-size: 1.5vw;
+  font-size: 1.5em;
   font-family: Arial, sans-serif;
   display: inline-block;
   white-space: nowrap;
@@ -8,7 +8,7 @@
 
 .typing-container .typing-text {
   display: inline;
-  font-size: 4vw;
+  font-size: 2em;
   font-family: Arial, sans-serif;
 }
 
@@ -34,12 +34,18 @@
     opacity: 0;
   }
 }
-
+.carosoul-container{
+ padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
 .carousel {
   position: relative;
   max-width: 100%;
   margin: auto;
   overflow: hidden;
+  width: 90%;
+  
 }
 
 .carousel-images {

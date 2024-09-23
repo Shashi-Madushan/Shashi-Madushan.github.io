@@ -24,22 +24,23 @@
   <!-- About Section -->
   <section id="about">
     <h1>Services</h1>
-    <div class="carousel" id="carousel">
-      <div class="carousel-images">
-        <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1" class="active">
-        <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
-        <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+    <div class="carosoul-container">
+      <div class="carousel" id="carousel">
+        <div class="carousel-images">
+          <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1" class="active">
+          <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+          <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+        </div>
+        <div class="prev">&#10094;</div>
+        <div class="next">&#10095;</div>
       </div>
-      <div class="prev">&#10094;</div>
-      <div class="next" >&#10095;</div>
-    </div>
 
-    <div class="dots">
-      <span class="dot active-dot" ></span>
-      <span class="dot" ></span>
-      <span class="dot" ></span>
+      <div class="dots">
+        <span class="dot active-dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </div>
-
   </section>
 
   <!-- Portfolio Section -->
@@ -52,7 +53,7 @@
   <!-- Resume Section -->
   <section id="resume">
     <h1>Recent Bolgs</h1>
-    <!-- Resume content -->
+    <div id="blog-card-container" class="blog-card-container"></div>
   </section>
   <script src="../scripts/home.js"></script>
 </body>
