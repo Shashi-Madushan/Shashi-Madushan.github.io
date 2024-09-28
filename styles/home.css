@@ -1,3 +1,12 @@
+.homeTextContainer{
+text-align: center;
+justify-content: center;
+align-items: center;
+
+
+}
+
+
 .typing-container {
   font-size: 1.5em;
   font-family: Arial, sans-serif;
