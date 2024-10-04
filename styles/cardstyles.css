@@ -16,7 +16,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -34,27 +34,34 @@
 
 .card__title {
   margin: 0;
-  font-size: 25px;
+  font-size: 1.2em;
   color: #ffffff;
   font-weight: 700;
 }
 
 .card__description {
-  margin: 10px 0;
-  font-size: 12px;
+  margin: 0.7em 0;
+  font-size: 0.8em;
   color: #d3caca;
   line-height: 1.4;
 }
-
+.buttons{
+  width: 100%;
+  display: flex;
+  gap: 10%;
+  
+}
 .card__button {
-  padding: 15px;
-
+  padding: 0.6em;
+  object-fit: cover;
   border-radius: 8px;
   background: #777;
   border: none;
   color: white;
   cursor: pointer;
   text-decoration: none;
+  width: 40%;
+  
 }
 
 .card__button.secondary {

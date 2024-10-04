@@ -32,7 +32,7 @@ body {
   position: fixed;
   top: 14px;
   left: 20px;
-  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
   background-color: var(--rich-black);
   color: var(--antiflash-white);
   padding: 25px 0 0 0;
@@ -310,8 +310,8 @@ ul {
 .text-downline {
   background-color: var(--celestial-blue);
   border-radius: var(--border-radius);
-  width: 1.25em;
-  height: 0.3125em;
+  width: 2em;
+  height: 0.4em;
 }
 
 nav {
@@ -344,9 +344,10 @@ nav a:active {
 /* Card styles */
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* 3 columns for desktop and laptop view */
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+ 
+  gap: 10px;
+  object-fit: cover;
 }
 
 .card {
@@ -362,6 +363,7 @@ nav a:active {
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   box-shadow: 0 0 5px var(--glow-color);
+  object-fit: cover;
 
 }
 
@@ -375,7 +377,7 @@ nav a:active {
 }
 
 .cards:hover>.card:not(:hover) {
-  filter: blur(10px);
+  /* filter: blur(10px); */
   transform: scale(0.9, 0.9);
 }
 
@@ -384,16 +386,16 @@ nav a:active {
 }
 
 section {
-  min-height: 80vh;
+  min-height: 75vh;
+  
   margin-bottom: 30px;
   padding-top: 10px;
   
 }
 
-/* Media Queries */
 
 /* Large screens (1200px and up) */
-/* No styles */
+
 
 /* Medium screens (992px - 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {

@@ -168,7 +168,7 @@
     });
 
     showSlides(slideIndex);
-    autoScroll = setInterval(autoSlide, 3000);
+    autoScroll = setInterval(autoSlide, 5000);
 
 
 
