@@ -1,4 +1,6 @@
 .homeTextContainer{
+margin-top: 8rem;
+margin-bottom: 8rem;
 text-align: center;
 justify-content: center;
 align-items: center;
@@ -8,7 +10,7 @@ align-items: center;
 
 
 .typing-container {
-  font-size: 1.5em;
+  font-size: 1.rem;
   font-family: Arial, sans-serif;
   display: inline-block;
   white-space: nowrap;
@@ -17,14 +19,14 @@ align-items: center;
 
 .typing-container .typing-text {
   display: inline;
-  font-size: 3em;
+  font-size: 3rem;
   font-family: Arial, sans-serif;
 }
 
 .typing-container .cursor {
   display: inline-block;
-  width: 0.6em;
-  height:4em;
+  width: 0.6rem;
+  height:4rem;
   background-color: rgb(255, 255, 255);
   margin-left: 0.5vw;
   animation: blink 0.7s steps(1) infinite;

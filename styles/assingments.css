@@ -1,0 +1,46 @@
+.assingmentContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 3rem;
+    gap: 1.2rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.card {
+    /* applied form card styles and styles.css files  */
+    object-fit: cover;
+    height: 5rem;
+    color: white;
+}
+
+@media (min-width: 1200px) {
+    /* Styles for large screens */
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Styles for medium screens */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Styles for small screens */
+    .assingmentContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    /* Styles for extra small screens */
+    .assingmentContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    /* Styles for mobile screens */
+    .assingmentContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

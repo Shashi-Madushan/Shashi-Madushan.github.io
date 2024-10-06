@@ -292,6 +292,7 @@ ul {
   box-shadow: 0 0 3px var(--glow-color);
   transition: box-shadow 0.3s ease-in-out;
   max-width: 95vw;
+  min-width: var(--sidebar-width);
 }
 
 .main-content:hover {
@@ -312,6 +313,7 @@ ul {
   border-radius: var(--border-radius);
   width: 2em;
   height: 0.4em;
+  margin-bottom: 3rem;
 }
 
 nav {
@@ -323,13 +325,15 @@ nav {
   padding: 0.625em;
   border-radius: 0 var(--border-radius) 0 var(--border-radius);
   box-shadow: 0 0 5px var(--glow-color);
-  font-size: 1em;
+  
 }
 
 nav a {
   color: var(--antiflash-white);
   text-decoration: none;
   padding: 0 1.25em;
+  font-size: 0.9rem;
+  width: fit-content;
 }
 
 nav a:hover {
@@ -383,13 +387,13 @@ nav a:active {
 
 .dynamic_section {
   padding: 0 20px;
+ 
 }
 
 section {
   min-height: 75vh;
-  
-  margin-bottom: 30px;
-  padding-top: 10px;
+  margin-bottom: 2rem;
+  padding-top: 0.5rem;
   
 }
 
@@ -431,6 +435,12 @@ section {
     justify-content: space-evenly;
   }
 
+  section {
+    min-height: fit-content;
+    
+    
+  }
+  
   .cards .card {
     width: 100%;
   }
@@ -499,7 +509,7 @@ section {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 690px) {
   .sidebar-info {
     display: flex;
     align-items: center;
@@ -524,6 +534,11 @@ section {
   .main-content {
     margin: 30px auto 60px auto;
     width: calc(100% - 40px);
+  }
+  section {
+    min-height: fit-content;
+    
+    
   }
 
   .sidebar {
@@ -564,7 +579,7 @@ section {
 
   nav {
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     padding: 0.1em;
