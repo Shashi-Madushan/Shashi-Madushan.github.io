@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Assignment 1",
+        "url": "../pages/projects.html",
+        "cases": [
+            { "caseTitle": "Case 1", "url": "../pages/case1.html" },
+            { "caseTitle": "Case 2", "url": "../pages/case2.html" }
+        ]
+    },
+    {
+        "title": "Assignment 2",
+        "url": "../pages/about.html",
+        "cases": [
+            { "caseTitle": "Case A", "url": "../pages/caseA.html" },
+            { "caseTitle": "Case B", "url": "../pages/caseB.html" }
+        ]
+    },
+    {
+        "title": "Assignment 3",
+        "url": "../pages/about.html",
+        "cases": [] 
+    }
+    ,
+    {
+        "title": "Assignment 3",
+        "url": "projects/assignment3/index.html",
+        "cases": [] 
+    }
+]

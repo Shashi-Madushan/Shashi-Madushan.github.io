@@ -9,11 +9,17 @@
 </head>
 
 <body>
-    <div class="assingmentContainer">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+       <!-- Container for the assignments -->
+       <div id="assignment-list" class="assignment-container">
+        <!-- Assignments will be dynamically generated here -->
+    </div>
+
+    <!-- Popup window structure -->
+    <div id="assignment-popup" class="assignment-popup">
+        <div class="assignment-popup-content">
+            <span class="assignment-close-btn">&times;</span>
+            <iframe id="assignment-popup-frame" src="" frameborder="0"></iframe>
+        </div>
     </div>
     <script src="../scripts/assingments.js"></script>
 

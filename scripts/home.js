@@ -64,7 +64,7 @@
     });
 
 
-    const texts = ["Hello World!", "Welcome to My Site", "Enjoy Your Stay"];
+    const texts = ["Hello World!", "Welcome", "Enjoy Your Stay"];
     const typingSpeed = 100; // typing speed in ms
     const erasingSpeed = 50; // erasing speed in ms
     const delayBetweenTexts = 1500; // delay before typing next text in ms
