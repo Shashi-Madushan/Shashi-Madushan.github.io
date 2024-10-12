@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Case 03</title>
+
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+        div{
+            width: 13vw;
+            height: 13vh;
+            border-radius: 20px;
+            background-color: orangered;
+
+            animation: div-animation 4s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes div-animation {
+            0%{
+                margin-top: 0;
+                margin-left: 0;
+            }
+            25%{
+                margin-top: 80vh;
+                margin-left: 0;
+                transform: rotate(180deg);
+                background-color: deeppink;
+            }
+            50%{
+                margin-top: 80vh;
+                margin-left: 87vw;
+                transform: rotate(0deg);
+                background-color: red;
+            }
+            75%{
+                margin-top: 0;
+                margin-left: 87vw;
+                transform: rotate(180deg);
+                background-color: yellow;
+            }
+            100%{
+                margin-top: 0;
+                margin-left: 0;
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

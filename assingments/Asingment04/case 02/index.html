@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 02</title>
+
+    <style>
+
+        body{
+            background-color: darkblue;
+        }
+        div{
+
+            width: 200px;
+            border-radius: 100%;
+            aspect-ratio: 1/1;
+            background-color: gray;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        div>h1{
+
+            width:max-content;
+            height: max-content;
+
+            color: white;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        div::before{
+        /*space content ekak laba ganna*/
+            content: "";
+        /*height ekak width ekak dunne nathi unama adala parenge size ekata me space content eka adenawa*/
+            border: 10px solid white;
+            border-radius: 100%;
+            border-top-color: red;
+
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+
+            animation: animation 3s infinite;
+        }
+
+        /*div:hover::before{*/
+        /*    transform: rotate(360deg);*/
+        /*    transition-duration: 3s;*/
+        /*}*/
+
+        @keyframes animation {
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+<div>
+    <h1>
+        CMJD
+    </h1>
+</div>
+</body>
+</html>

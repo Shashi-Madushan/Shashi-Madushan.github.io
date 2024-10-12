@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 05</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        main{
+            width: 700px;
+            height: 400px;
+            overflow: hidden;
+            border: 3px solid red;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        section{
+            width: calc(700px * 4);
+            height: 400px;
+
+            display: flex;
+
+            animation: animate-slider 20s infinite;
+        }
+
+        img{
+            width: 700px;
+            height: 400px;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+
+
+        @keyframes animate-slider {
+            0%,10%{
+                transform: translateX(0);
+            }
+            15%,25%{
+                transform: translateX(-700px);
+            }
+            30%,40%{
+                transform: translateX(calc(-700px * 2));
+            }
+            45%,55%{
+                transform: translateX(calc(-700px * 3));
+            }
+            60%,70%{
+                transform: translateX(calc(-700px * 2));
+            }
+            75%,85%{
+                transform: translateX(-700px);
+            }
+            90%,100%{
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <img src="slides/slide1.jpeg" alt="p1" ><img src="slides/slide2.jpeg" alt="p1" ><img src="slides/slide3.jpeg" alt="p1" ><img src="slides/slide4.jpeg" alt="p1" >
+
+    </section>
+</main>
+</body>
+</html>

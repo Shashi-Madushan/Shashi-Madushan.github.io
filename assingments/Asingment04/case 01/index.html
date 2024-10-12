@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Case 01</title>
+
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+        section{
+            width: 350px;
+            height: 80vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        div{
+            background-color: #8f028f;
+            width: 350px;
+            height: 80px;
+            position: relative;
+            left: -280px;
+            display: block;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+            transition-property: left;
+            transition-duration: 3s;
+        }
+        div:hover{
+            left: 0;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 10px;
+            margin: auto;
+        }
+        label{
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 40px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <label>Menu One</label>
+            <img src="icon/icons8-search-contacts-50.png" alt="inside image">
+        </div>
+        <div>
+            <label>Menu Two</label>
+            <img src="icon/icons8-ambulance-60.png" alt="inside image">
+        </div>
+        <div>
+            <label>Menu Three</label>
+            <img src="icon/icons8-global-50.png" alt="inside image">
+        </div>
+        <div>
+            <label>Menu Four</label>
+            <img src="icon/icons8-layer-60.png" alt="inside image">
+        </div>
+        <div>
+            <label>Menu Five</label>
+            <img src="icon/icons8-shopping-cart-50.png" alt="inside image">
+        </div>
+    </section>
+</body>
+</html>

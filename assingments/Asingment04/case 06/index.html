@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 06</title>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+            background-image: url("assest/sky.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .building{
+            overflow: hidden;
+            width: 100vw;
+            height: 40vh;
+            position: absolute;
+            top: 25vh;
+
+        }
+        .building>section{
+            width: 400vw;
+            height: 40vh;
+            display: flex;
+
+            animation: background-animation 10s infinite;
+        }
+        .building>section>div{
+            width: 100vw;
+            height: 40vh;
+            background-image: url("assest/city.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .road{
+            overflow: hidden;
+            width: 100vw;
+            height: 35vh;
+            position: absolute;
+            bottom: 0;
+        }
+        .road>section{
+            width: 400vw;
+            height: 35vh;
+            display: flex;
+
+            animation: background-animation 10s infinite;
+        }
+        .road>section>div{
+            width: 100vw;
+            height: 35vh;
+            background-image: url("assest/road.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        @keyframes background-animation {
+            from{
+                transform: translate(0);
+            }
+            to{
+                transform: translate(-300vw);
+            }
+        }
+
+        .car{
+            width: 350px;
+            height: 150px;
+            background-image: url("assest/car.png");
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 58vh;
+            left: 45vw;
+        }
+        .wheel{
+            width: 65px;
+            aspect-ratio: 1/1;
+            background-image: url("assest/wheel.png");
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 67vh;
+
+            animation: wheel-animation 10s infinite;
+        }
+        .w1{
+            left: calc(63vw + 6px);
+        }
+        .w2{
+            left: calc(46vw + 16px);
+        }
+        @keyframes wheel-animation {
+            to{
+                transform: rotate(0);
+            }
+            from{
+                transform: rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="building">
+            <section>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+        </section>
+        <section class="road">
+            <section>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </section>
+        </section>
+        <section class="car">
+            <div class="wheel w1"></div>
+            <div class="wheel w2"></div>
+        </section>
+    </main>
+</body>
+</html>

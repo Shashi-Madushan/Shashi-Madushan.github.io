@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Case 04</title>
+
+  <style>
+    body{
+      margin: 0;
+      overflow: hidden;
+    }
+    .onScreen{
+      border-radius: 100%;
+      border: 3px solid red;
+
+      animation: animation 2s;
+      animation-iteration-count: infinite;
+    }
+    section{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .onclick{
+      border-radius: 100%;
+      border: 3px solid red;
+      display: none;
+      position: absolute;
+    }
+    section:active .onclick{
+      animation: animation1 2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @keyframes animation1 {
+      from{
+        padding: 5px;
+        border: 3px solid red;
+      }
+      to{
+        padding: 50px;
+        border: 1px solid red;
+      }
+    }
+    @keyframes animation {
+      from{
+        width: 10px;
+          height: 10px;
+        border: 5px solid red;
+      }
+      to{
+        width: 300px;
+          height: 300px;
+        border: 1px solid red;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <div class="onScreen"></div>
+    <div class="onclick"></div>
+  </section>
+</body>
+</html>
