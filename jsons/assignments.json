@@ -1,29 +1,26 @@
 [
     {
-        "title": "Assignment 1",
-        "url": "../pages/projects.html",
+        "title": "Assignment 04",
+        "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2004/case%2001/index.html",
         "cases": [
-            { "caseTitle": "Case 1", "url": "../pages/case1.html" },
-            { "caseTitle": "Case 2", "url": "../pages/case2.html" }
+            { "caseTitle": "Case 01", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2004/case%2001/index.html" },
+            { "caseTitle": "Case 02", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2004/case%2002/index.html" },
+            { "caseTitle": "Case 03", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2004/case%2003/index.html" },
+            { "caseTitle": "Case 04", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2004/case%2004/index.html" },
+            { "caseTitle": "Case 05", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2004/case%2005/slides.html" },
+            { "caseTitle": "Case 06", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2004/case%2006/index.html" }
         ]
     },
     {
-        "title": "Assignment 2",
-        "url": "../pages/about.html",
+        "title": "Assignment 03",
+        "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2003/index.html",
         "cases": [
-            { "caseTitle": "Case A", "url": "../pages/caseA.html" },
-            { "caseTitle": "Case B", "url": "../pages/caseB.html" }
+            { "caseTitle": "Case 1", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2003/case1.html" },
+            { "caseTitle": "Case 2", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2003/case2.html" },
+            { "caseTitle": "Case 3", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2003/case3.html" },
+            { "caseTitle": "Case 4", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2003/case4.html" },
+            { "caseTitle": "Case 5", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2003/case5.html" },
+            { "caseTitle": "Case 6", "url": "https://raw.githubusercontent.com/Shashi-Madushan/WebTechAssignments/main/Assignment%2003/case6.html" }
         ]
-    },
-    {
-        "title": "Assignment 3",
-        "url": "../pages/about.html",
-        "cases": [] 
-    }
-    ,
-    {
-        "title": "Assignment 3",
-        "url": "projects/assignment3/index.html",
-        "cases": [] 
     }
 ]

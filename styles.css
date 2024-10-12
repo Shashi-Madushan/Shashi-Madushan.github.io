@@ -117,8 +117,8 @@ body {
   font-size: 20px;
   cursor: pointer;
   color: white;
-  width: 130px;
-  height: 32px;
+  width: fit-content;
+  height: auto;
   z-index: 1000;
   /* Ensure the button is above other content */
 }
