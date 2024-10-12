@@ -9,7 +9,7 @@
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   --font-family: Arial, sans-serif;
   --spacing-small: 14px;
- 
+
   --spacing-medium: 16px;
   --spacing-large: 32px;
   --sidebar-width: 250px;
@@ -308,6 +308,18 @@ ul {
 
 }
 
+.top-bar nav a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+}
+
+/* Initially hide icons */
+.top-bar nav .nav-icon {
+  display: none;
+}
+
 .text-downline {
   background-color: var(--celestial-blue);
   border-radius: var(--border-radius);
@@ -325,7 +337,7 @@ nav {
   padding: 0.625em;
   border-radius: 0 var(--border-radius) 0 var(--border-radius);
   box-shadow: 0 0 5px var(--glow-color);
-  
+
 }
 
 nav a {
@@ -349,7 +361,7 @@ nav a:active {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
- 
+
   gap: 10px;
   object-fit: cover;
 }
@@ -387,14 +399,14 @@ nav a:active {
 
 .dynamic_section {
   padding: 0 20px;
- 
+
 }
 
 section {
   min-height: 75vh;
   margin-bottom: 2rem;
   padding-top: 0.5rem;
-  
+
 }
 
 
@@ -437,10 +449,10 @@ section {
 
   section {
     min-height: fit-content;
-    
-    
+
+
   }
-  
+
   .cards .card {
     width: 100%;
   }
@@ -518,9 +530,11 @@ section {
     margin: 0;
 
   }
-  .avatar-box{
+
+  .avatar-box {
     margin: 0;
   }
+
   .redius {
     width: 90px;
     height: 90px;
@@ -536,10 +550,11 @@ section {
     width: calc(100% - 40px);
     padding: 2rem 0;
   }
+
   section {
     min-height: fit-content;
     padding: 1rem;
-    
+
   }
 
   .sidebar {
@@ -550,7 +565,7 @@ section {
     flex-direction: column;
   }
 
-  
+
 
 
 
@@ -567,7 +582,7 @@ section {
   }
 
   .top-bar {
-    
+
     position: fixed;
     top: auto;
     bottom: 0;
@@ -592,6 +607,19 @@ section {
     text-align: center;
     width: 70px;
     padding: 1.5em 0;
+  }
+
+  .nav-text {
+    display: none;
+    /* Hide text */
+  }
+
+  .top-bar nav .nav-icon {
+    display: inline-block;
+    align-self: center;
+    font-size: 24px;
+    
+    color: #ffffff;
   }
 
   .cards {
