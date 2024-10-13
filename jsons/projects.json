@@ -35,31 +35,31 @@
         "github": "http://github.com/repo2"
     },
     {
-        "photo": "assets/36391518fdb85f1bfa77bec4f23b54ac.jpg",
-        "title": "Project 2",
-        "description": "Description for project 2",
-        "liveDemo": "http://example.com/demo2",
-        "github": "http://github.com/repo2"
+        "photo": "../assets/projectThumbnails/canteendashbord.png",
+        "title": "Order Dashboard ",
+        "description": "Dashboard to view custome orders and total orders and special orders ",
+        "liveDemo": "null",
+        "github": "https://github.com/Shashi-Madushan/CanteenDashboard"
     },
     {
-        "photo": "assets/36391518fdb85f1bfa77bec4f23b54ac.jpg",
-        "title": "Project 2",
-        "description": "Description for projectprojectprojectprojectprojectprojectproject 2",
-        "liveDemo": "http://example.com/demo2",
-        "github": "http://github.com/repo2"
+        "photo": "../assets/projectThumbnails/AquariamManager.png",
+        "title": "Aquarium management sysytem",
+        "description": "This is a pos system and a inventory management system to manage orders nad fish and get dayly and monthly repirts , a simple aquariu manager ",
+        "liveDemo": "null",
+        "github": "https://github.com/Shashi-Madushan/AquariumManagementSystem"
     },
     {
-        "photo": "assets/36391518fdb85f1bfa77bec4f23b54ac.jpg",
-        "title": "Project 2",
-        "description": "Description for project 2",
-        "liveDemo": "http://example.com/demo2",
-        "github": "http://github.com/repo2"
+        "photo": "../assets/projectThumbnails/order manager with nfc.png",
+        "title": "Order management system",
+        "description": "A software to manage and view custome ordrs . ",
+        "liveDemo": "null",
+        "github": "https://github.com/Shashi-Madushan/orderMangerWithNFCLayerd"
     },
     {
         "photo": "../assets/projectThumbnails/esp8266RelayController.png",
         "title": "Smart relay Controller",
         "description": "This project uses an ESP8266 microcontroller to control four relays via a web interface. Each relay can be toggled on or off using the web dashboard.",
-        "liveDemo": "nan",
+        "liveDemo": "null",
         "github": "https://github.com/Shashi-Madushan/esp8266RelayControllerWithUI"
     }
 ]
