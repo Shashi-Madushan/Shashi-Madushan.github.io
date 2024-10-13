@@ -1,68 +1,55 @@
 (function () {
 
 
-    const projects = [
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 1',
-            description: 'Description for projeprojectprojectprojectprojectct 1',
-            liveDemo: 'http://example.com/demo1',
-            github: 'http://github.com/repo1'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Descriptioprojectprojectprojectn for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demoprojectprojectprojectproject2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
+    let projects = null;
+    async function loadProjects() {
+        try {
+            const res = await fetch('../jsons/projects.json');
+            const data = await res.json();
+            if (data.length >= 4) {
+                projects = data.slice(-4).reverse(); // Get the last 4 projects
+            } else {
+                projects = data; // Less than 4 projects, include all projects
+            }
+            renderProjects();
+        } catch (error) {
+            console.log("error loading latest projects", error);
         }
 
-    ];
+    }
 
     // Get the container element
     const container = document.getElementById('card-container');
-
-    // Iterate over the project data and create cards
-    projects.forEach(project => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.innerHTML = `
-        <img src="${project.photo}" alt="Project Image" class="card__image">
-        <div class="card__content">
-            <p class="card__title">${project.title}</p>
-            <p class="card__description">${project.description}</p>
-            <div class="buttons">
-            <a href="${project.liveDemo}" class="card__button" target="_blank">Live Demo</a>
-            <a href="${project.github}" class="card__button secondary" target="_blank">Source Code</a>
+    function renderProjects() {
+        // Check if projects is not null before iterating
+        if (projects) {
+            // Iterate over the project data and create cards
+            projects.forEach(project => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.innerHTML = `
+            <img src="${project.photo}" alt="Project Image" class="card__image">
+            <div class="card__content">
+                <p class="card__title">${project.title}</p>
+                <p class="card__description">${project.description}</p>
+                <div class="buttons">
+                <a href="${project.liveDemo}" class="card__button" target="_blank">Live Demo</a>
+                <a href="${project.github}" class="card__button secondary" target="_blank">Source Code</a>
+                </div>
             </div>
-        </div>
-    `;
-        container.appendChild(card);
-    });
+        `;
+                container.appendChild(card);
+            });
+        } else {
+            console.log("No projects to render");
+        }
 
+    }
+
+    
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
 
     const texts = ["Hello World!", "Welcome", "Enjoy Your Stay"];
     const typingSpeed = 100; // typing speed in ms
@@ -99,133 +86,136 @@
         }
     }
 
-    type(); // Start the typing animation
+     // Start the typing animation
 
 
     let slideIndex = 1;
     let autoScroll;
+    function renderSlides() {
 
-    function showSlides(n) {
-        const slides = document.getElementsByClassName("carousel-images")[0].getElementsByTagName("img");
-        const dots = document.getElementsByClassName("dot");
+        function showSlides(n) {
+            const slides = document.getElementsByClassName("carousel-images")[0].getElementsByTagName("img");
+            const dots = document.getElementsByClassName("dot");
 
-        if (n > slides.length) slideIndex = 1;
-        if (n < 1) slideIndex = slides.length;
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
 
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].classList.remove("active");
-            dots[i].classList.remove("active-dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                dots[i].classList.remove("active-dot");
+            }
+
+            slides[slideIndex - 1].classList.add("active");
+            dots[slideIndex - 1].classList.add("active-dot");
         }
 
-        slides[slideIndex - 1].classList.add("active");
-        dots[slideIndex - 1].classList.add("active-dot");
-    }
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides(slideIndex);
+            resetAutoScroll();
+        }
 
-    function plusSlides(n) {
-        slideIndex += n;
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides(slideIndex);
+            resetAutoScroll();
+        }
+
+        function autoSlide() {
+            slideIndex++;
+            showSlides(slideIndex);
+        }
+
+        function resetAutoScroll() {
+            clearInterval(autoScroll);
+            autoScroll = setInterval(autoSlide, 3000);
+        }
+
+        document.getElementById('carousel').addEventListener('mouseenter', () => {
+            clearInterval(autoScroll);
+        });
+
+        document.getElementById('carousel').addEventListener('mouseleave', () => {
+            resetAutoScroll();
+        });
+
+        const dots = document.getElementsByClassName("dot");
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].addEventListener('click', () => {
+                currentSlide(i + 1); // Adjust index to start from 1
+            });
+        }
+
+        // Add event listeners for next and previous buttons
+        document.querySelector('.prev').addEventListener('click', () => {
+            plusSlides(-1); // Move to the previous slide
+        });
+
+        document.querySelector('.next').addEventListener('click', () => {
+            plusSlides(1); // Move to the next slide
+        });
+
         showSlides(slideIndex);
-        resetAutoScroll();
+        autoScroll = setInterval(autoSlide, 5000);
     }
 
-    function currentSlide(n) {
-        slideIndex = n;
-        showSlides(slideIndex);
-        resetAutoScroll();
+    
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    let blogs = null;
+
+    async function loadBolgs() {
+        try {
+            const res = await fetch('../jsons/blogs.json');
+            const bolgData = await res.json();
+            if (bolgData.length > 4) {
+                blogs = bolgData.slice(-4).reverse();
+
+            } else {
+                blogs = bolgData.reverse();
+            }
+            renderBlogs()
+        } catch (error) {
+            console.log("errer loading bloogs (home )", error);
+        }
+
     }
 
-    function autoSlide() {
-        slideIndex++;
-        showSlides(slideIndex);
-    }
+    const blogcontainer = document.getElementById('dynamic-blog-card-container');
 
-    function resetAutoScroll() {
-        clearInterval(autoScroll);
-        autoScroll = setInterval(autoSlide, 3000);
-    }
+    function renderBlogs() {
+        // Clear existing content
+        blogcontainer.innerHTML = '';
 
-    document.getElementById('carousel').addEventListener('mouseenter', () => {
-        clearInterval(autoScroll);
-    });
+        // Iterate over the blog data and create cards dynamically
+        blogs.forEach(blog => {
+            const card = document.createElement('div');
+            card.classList.add('blog-card-container');
 
-    document.getElementById('carousel').addEventListener('mouseleave', () => {
-        resetAutoScroll();
-    });
+            card.innerHTML = `
+                <div class="blog-card">
+                <div class="blog-front-content" style="background: url('${blog.photo}') center/cover no-repeat;">
+                    <p>Hover to Read</p>
+                </div>
+                <div class="blog-content">
+                    <p class="blog-heading">${blog.title}</p>
+                    <p>${blog.description}</p>
+                </div>
+                <button class="blog-card-button" onclick="window.open('${blog.link}', '_blank')">Read More</button>
+                </div>
+            `;
 
-    const dots = document.getElementsByClassName("dot");
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].addEventListener('click', () => {
-            currentSlide(i + 1); // Adjust index to start from 1
+            blogcontainer.appendChild(card);
         });
     }
 
-    // Add event listeners for next and previous buttons
-    document.querySelector('.prev').addEventListener('click', () => {
-        plusSlides(-1); // Move to the previous slide
-    });
-
-    document.querySelector('.next').addEventListener('click', () => {
-        plusSlides(1); // Move to the next slide
-    });
-
-    showSlides(slideIndex);
-    autoScroll = setInterval(autoSlide, 5000);
-
-
-
-    //////////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////////
-
-    const blogs = [
-        {
-            photo: 'https://via.placeholder.com/400x200',
-            title: 'Blog Post 1',
-            description: 'This is a description of the first blog post. It gives an overview of the content.',
-            link: 'http://example.com/blog1'
-        },
-        {
-            photo: 'https://via.placeholder.com/400x200',
-            title: 'Blog Post 2',
-            description: 'This is a description of the second blog post. It gives an overview of the content.',
-            link: 'http://example.com/blog2'
-        },
-        {
-            photo: 'https://via.placeholder.com/400x200',
-            title: 'Blog Post 3',
-            description: 'This is a description of the third blog post. It gives an overview of the content.',
-            link: 'http://example.com/blog3'
-        },
-        {
-            photo: 'https://via.placeholder.com/400x200',
-            title: 'Blog Post 4',
-            description: 'This is a description of the fourth blog post. It gives an overview of the content.',
-            link: 'http://example.com/blog4'
-        },
-        {
-            photo: 'https://via.placeholder.com/400x200',
-            title: 'Blog Post 3',
-            description: 'This is a description of the third blog post. It gives an overview of the content.',
-            link: 'http://example.com/blog3'
-        }
-
-    ];
-
-    // Get the container element for the blog cards
-    const blogContainer = document.getElementById('blog-card-container');
-
-    // Iterate over the blog data and create cards dynamically
-    blogs.forEach(blog => {
-        const card = document.createElement('div');
-        card.classList.add('blog-card');
-        card.innerHTML = `
-        <img src="${blog.photo}" alt="${blog.title}" class="blog-card-image">
-        <div class="blog-card-content">
-          <h2 class="blog-card-title">${blog.title}</h2>
-          <p class="blog-card-description">${blog.description}</p>
-          <a href="${blog.link}" class="blog-card-button" target="_blank">Read More</a>
-        </div>
-      `;
-      blogContainer.appendChild(card);
-    });
+    type();
+    renderSlides();
+    loadProjects();
+    loadBolgs();
 
 
 

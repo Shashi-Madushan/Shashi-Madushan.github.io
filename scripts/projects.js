@@ -1,204 +1,28 @@
 (function () {
 
-    const projects = [
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 1',
-            description: 'Description for projeprojectprojectprojectprojectct 1',
-            liveDemo: 'http://example.com/demo1',
-            github: 'http://github.com/repo1'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Descriptioprojectprojectprojectn for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demoprojectprojectprojectproject2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Descriptioprojectprojectprojectn for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demoprojectprojectprojectproject2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Descriptioprojectprojectprojectn for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demoprojectprojectprojectproject2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        },
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2 ',
-            description: 'Description for projectprojectprojectprojectprojectprojectproject 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
-        }
-        ,
-        {
-            photo: 'assets/36391518fdb85f1bfa77bec4f23b54ac.jpg',
-            title: 'Project 2',
-            description: 'Description for project 2',
-            liveDemo: 'http://example.com/demo2',
-            github: 'http://github.com/repo2'
+    let projects = null;
+    async function loadProjects() {
+        try {
+            const res = await fetch('../jsons/projects.json');
+            const data = await res.json();
+           
+                projects = data.reverse(); // Less than 4 projects, include all projects
+            
+            renderProjects();
+        } catch (error) {
+            console.log("error loading latest projects", error);
         }
 
-    ];
-
+    }
     // Get the container element
     const container = document.getElementById('card-container');
 
-    // Iterate over the project data and create cards
-    projects.forEach(project => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.innerHTML = `
+    function renderProjects() {
+        // Iterate over the project data and create cards
+        projects.forEach(project => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = `
         <img src="${project.photo}" alt="Project Image" class="card__image">
         <div class="card__content">
             <p class="card__title">${project.title}</p>
@@ -209,8 +33,10 @@
             </div>
         </div>
     `;
-        container.appendChild(card);
-    });
+            container.appendChild(card);
+        });
+    }
 
+    loadProjects();
 
 })();

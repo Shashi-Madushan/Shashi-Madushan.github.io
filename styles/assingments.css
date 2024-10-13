@@ -1,81 +1,120 @@
-
 /* Assignments Grid Layout */
 .assignment-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Default for large screens */
+    grid-template-columns: repeat(4, 1fr);
+    /* Default for large screens */
     gap: 20px;
     margin: 2rem auto;
     max-width: 1200px;
 }
 
-/* Individual Assignment Card */
+/* Assignment card styles */
 .assignment-card {
-    background-color: #424242;
+    background-color: #2e2e2e;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
+    color: #fff;
 }
 
 .assignment-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
 }
 
+/* Title styles */
 .assignment-card h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
     margin-bottom: 15px;
-    color: #d1d1d1;
-    font-size: 1.25rem;
+    color: #f0f0f0;
 }
 
-/* Buttons for each assignment */
+/* Grid layout for buttons */
+.assignment-case-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Centering the buttons */
+.assignment-case-list li {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button styling */
 .assignment-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007BFF;
+    background-color: #4caf50;
     color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
     cursor: pointer;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
 }
 
+/* Button hover effect */
 .assignment-button:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
+    transform: scale(1.05);
 }
 
-/* Popup styles */
+/* Popup modal styles */
 .assignment-popup {
     z-index: 15;
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
 }
 
 .assignment-popup-content {
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     position: relative;
     width: 80%;
     height: 80%;
 }
-
+/* Close button styling */
 .assignment-close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 38px;
+    top: 20px;
+    right: 20px;
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    padding: 10px;
     cursor: pointer;
-    color: black;
-
+    width: 20px;
+    height: 20px;
+    border-radius: 45%;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+   
 }
+
+.assignment-close-btn:hover {
+    background-color: #ff0000;
+}
+
 
 .assignment-popup iframe {
     width: 100%;
@@ -83,25 +122,7 @@
     border: none;
 }
 
-/* Styling for the list of sub-files (cases) */
-.assignment-case-list {
-    margin-top: 15px;
-    padding-left: 20px;
-}
 
-.assignment-case-list li {
-    margin-bottom: 10px;
-}
-
-.assignment-case-list .assignment-button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-    background-color: #28a745;
-}
-
-.assignment-case-list .assignment-button:hover {
-    background-color: #218838;
-}
 
 
 /* Responsive Media Queries */

@@ -398,7 +398,7 @@ nav a:active {
 }
 
 .dynamic_section {
-  padding: 0 20px;
+  padding: 10px 20px;
 
 }
 
@@ -618,7 +618,7 @@ section {
     display: inline-block;
     align-self: center;
     font-size: 24px;
-    
+
     color: #ffffff;
   }
 
