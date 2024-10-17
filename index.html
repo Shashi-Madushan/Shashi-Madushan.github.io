@@ -155,13 +155,22 @@
               <span class="nav-text">Assignments</span>
               <i class="fas fa-file-alt nav-icon"></i>
           </a>
-          <a href="#" data-file="pages/contact.html">
-              <span class="nav-text">Contact</span>
-              <i class="fas fa-envelope nav-icon"></i>
-          </a>
       </nav>
   </header>
-  
+  <div class="contact-container">
+    <button  name=" " id="contactBtn" class="contact-button">
+        <i class="fas fa-phone"></i>
+    </button>
+    <div id="contactPopup" class="contact-popup">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
 
     <section class="dynamic_section" id="dynamic_content"></section>
 

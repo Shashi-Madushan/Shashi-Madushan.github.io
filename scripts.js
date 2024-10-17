@@ -81,3 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
+  document.getElementById('contactBtn').addEventListener('click', function() {
+    const popup = document.getElementById('contactPopup');
+    popup.classList.toggle('show'); // Use class toggle for show/hide
+});
+
