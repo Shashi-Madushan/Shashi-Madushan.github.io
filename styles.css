@@ -398,7 +398,7 @@ nav a:active {
 }
 
 .dynamic_section {
-  padding: 10px 10px;
+  padding: 0px 10px;
 
 }
 
@@ -516,7 +516,7 @@ section {
 /* Small screens (768px - 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .main-content {
-    width: calc(100% - 10px);
+    width: calc(100% - 30px);
     margin-left: 20px;
   }
 
@@ -630,7 +630,7 @@ section {
 
   .main-content {
     margin: 30px auto 60px auto;
-    width: calc(100% - 40px);
+    width: calc(100% - 16px);
     padding: 0 0;
   }
 
@@ -643,14 +643,13 @@ section {
   .sidebar {
     position: relative;
     margin-bottom: var(--spacing-large);
-    width: calc(100% - 40px);
-    /* Set the same width as main-content */
+    width: calc(100% - 16px);
+    
     flex-direction: column;
+    left: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
-
-
-
-
 
   .cards .card {
     width: 100%;
