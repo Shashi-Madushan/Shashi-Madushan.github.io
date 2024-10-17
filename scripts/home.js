@@ -198,7 +198,10 @@
             card.innerHTML = `
                 <div class="blog-card">
                 <div class="blog-front-content" style="background: url('${blog.photo}') center/cover no-repeat;">
+                   <div class="front-text-container">
+                    <p class="blog-heading">${blog.title}</p>
                     <p>Hover to Read</p>
+                    </div>
                 </div>
                 <div class="blog-content">
                     <p class="blog-heading">${blog.title}</p>

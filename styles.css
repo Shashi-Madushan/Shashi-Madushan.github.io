@@ -109,11 +109,11 @@ body {
 #toggle-sidebar-info {
   display: none;
   position: absolute;
-  bottom: 0px;
+  top:0;
   right: 0px;
   background: rgb(139, 139, 139);
   border: 1px solid white;
-  border-radius: 8px 0 8px 0;
+  border-radius:  0 8px 0 8px;
   font-size: 20px;
   cursor: pointer;
   color: white;
@@ -398,7 +398,7 @@ nav a:active {
 }
 
 .dynamic_section {
-  padding: 10px 20px;
+  padding: 10px 10px;
 
 }
 
@@ -553,7 +553,7 @@ section {
 
   section {
     min-height: fit-content;
-    padding: 1rem;
+    
 
   }
 

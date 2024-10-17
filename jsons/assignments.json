@@ -2,6 +2,7 @@
     
     {
         "title": "Assignment 3",
+        "description":"Portfolio",
         "url": "../assingments/Assignment03",
         "cases": [
             { "caseTitle": "positioning", "url": "../assingments/Assignment03/case1.html" },
@@ -13,6 +14,7 @@
     },
     {
         "title": "Assignment 4",
+        "description":"Portfolio",
         "url": "../assingments/Asingment04",
         "cases": [
             { "caseTitle": "Animated nav", "url": "../assingments/Asingment04/case 01/index.html" },
@@ -22,5 +24,23 @@
             { "caseTitle": "Image slider", "url": "../assingments/Asingment04/case 05/html.html" },
             { "caseTitle": "car Animation", "url": "../assingments/Asingment04/case 06/index.html" }
         ]
+    },
+    {
+        "title": "Assignment 5",
+        "description":"Portfolio",
+        "url": "../index.html"
+       
+    },
+    {
+        "title": "Assignment 6",
+        "description":"Pos",
+        "url": "../assingments"
+       
+    },
+    {
+        "title": "Assignment 7",
+        "description":"null",
+        "url": "null"
+       
     }
 ]

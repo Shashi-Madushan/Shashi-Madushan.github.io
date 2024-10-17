@@ -44,7 +44,7 @@
             } else {
                 // If no cases, add a single view button
                 const popupButton = document.createElement('button');
-                popupButton.innerText = 'View';
+                popupButton.innerText = assignment.description;
                 popupButton.classList.add('assignment-button');
                 popupButton.addEventListener('click', () => openPopup(assignment.url));
                 assignmentDiv.appendChild(popupButton);
