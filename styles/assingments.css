@@ -50,7 +50,7 @@
 
 /* Button styling */
 .assignment-button {
-    background-color: #4caf50;
+    background-color:rgb(71, 82, 238);
     color: white;
     border: none;
     border-radius: 8px;
@@ -66,7 +66,7 @@
 
 /* Button hover effect */
 .assignment-button:hover {
-    background-color: #45a049;
+    background-color: #0f189e;
     transform: scale(1.05);
 }
 

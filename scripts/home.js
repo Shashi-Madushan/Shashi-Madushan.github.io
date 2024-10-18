@@ -50,8 +50,7 @@
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-    const texts = ["Hello World!", "Welcome", "Enjoy Your Stay"];
+    const texts = ["Full-Stack Developer", "Creative Thinker", "UI/UX Designer", "Innovator", "Problem Solver"];
     const typingSpeed = 100; // typing speed in ms
     const erasingSpeed = 50; // erasing speed in ms
     const delayBetweenTexts = 1500; // delay before typing next text in ms
@@ -59,32 +58,37 @@
     let textIndex = 0;
     let charIndex = 0;
     let isErasing = false;
-
+    
     function type() {
-        const typingElement = document.getElementById("typing");
-        const currentText = texts[textIndex];
-
-        if (!isErasing) {
-            typingElement.textContent += currentText.charAt(charIndex);
-            charIndex++;
-            if (charIndex < currentText.length) {
-                setTimeout(type, typingSpeed);
-            } else {
-                isErasing = true;
-                setTimeout(type, delayBeforeErasing);
-            }
+      const typingElement = document.getElementById("typing");
+      const currentText = texts[textIndex];
+    
+      if (!isErasing) {
+        typingElement.textContent += currentText.charAt(charIndex);
+        charIndex++;
+        if (charIndex < currentText.length) {
+          setTimeout(type, typingSpeed);
         } else {
-            typingElement.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-            if (charIndex > 0) {
-                setTimeout(type, erasingSpeed);
-            } else {
-                isErasing = false;
-                textIndex = (textIndex + 1) % texts.length;
-                setTimeout(type, delayBetweenTexts);
-            }
+          isErasing = true;
+          setTimeout(type, delayBeforeErasing);
         }
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex > 0) {
+          setTimeout(type, erasingSpeed);
+        } else {
+          isErasing = false;
+          textIndex = (textIndex + 1) % texts.length;
+          setTimeout(type, delayBetweenTexts);
+        }
+      }
     }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(type, delayBetweenTexts); // Initial delay before starting the typing effect
+    });
+    
 
      // Start the typing animation
 

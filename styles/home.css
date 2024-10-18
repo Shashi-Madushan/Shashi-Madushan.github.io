@@ -1,50 +1,129 @@
-.homeTextContainer{
-margin-top: 8rem;
-margin-bottom: 8rem;
-text-align: center;
-justify-content: center;
-align-items: center;
-max-width: 90%;
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: #121212;
+  color: #f5f5f5;
+}
 
+.intro-section {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.intro-section .hello {
+  font-size: 3rem;
+  color: #f5f5f5;
+}
+
+.intro-section .name {
+  color: #4a90e2;
+  font-weight: bold;
+  font-size: 3.5rem;
 }
 
 .typing-container {
-  font-size: 1.rem;
-  font-family: Arial, sans-serif;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  object-fit: fill;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #cccccc;
 }
 
-.typing-container .typing-text {
-  display: inline;
-  font-size: 3rem;
-  font-family: Arial, sans-serif;
+.typing-container .description {
+  font-size: 2rem;
+  color: #cccccc;
 }
 
-.typing-container .cursor {
+.typing-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.typing-text {
+  font-size: 2rem;
+  color: #4a90e2;
+}
+
+.cursor {
   display: inline-block;
   width: 0.6rem;
-  height:4rem;
-  background-color: rgb(255, 255, 255);
+  height: 2rem;
+  background-color: #4a90e2;
   margin-left: 0.5vw;
   animation: blink 0.7s steps(1) infinite;
-  vertical-align: bottom;
 }
 
 @keyframes blink {
-
-  0%,
-  50% {
+  0%, 50% {
     opacity: 1;
   }
-
-  50.1%,
-  100% {
+  50.1%, 100% {
     opacity: 0;
   }
 }
+
+.homeSectionButtons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hire {
+  background-color: #ffffff;
+  color: #4a90e2;
+}
+
+.hire:hover {
+  background-color: #f5f5f5;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .intro-section {
+    padding: 0 20px;
+  }
+
+  .intro-section .hello,
+  .intro-section .name {
+    font-size: 2.5rem;
+  }
+
+  .typing-container {
+    font-size: 1.5rem;
+  }
+
+  .typing-text {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+}
+
 .carosoul-container{
  padding: 10px;
   align-items: center;
